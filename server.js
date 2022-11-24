@@ -23,6 +23,11 @@ const port = process.env.PORT || 3080;
 app.use('/api/users/',userRoutes)
 app.use('/api/transactions/',transactionRoutes)
 
+app.get('/',(req,res)=>{
+    // console.log("home")
+    res.send("M3 backend")
+})
+
 app.listen(port,()=>{
-    // console.log(`App live at port ${port}\nhttp://localhost:${port}`)
+    console.log(`App live at port ${port}\nhttp://localhost:${port}`)
 })
